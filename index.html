@@ -4,39 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>meteo app</title>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <header>
-      <form action="">
-        <input type="search" placeholder="Enter a city.." required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Paris</h1>
-        <p>Tuesday 10:46, brokenclouds <br />Humidity: 73%, Wind: 10.29Km/h</p>
-      </div>
-      <div>❄️ 5 °C</div>
-    </main>
+    <div class="container">
+      <header>
+        <form action="">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Pinyon+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+          />
+        </form>
+      </header>
 
-    <footer>
-      Coded by
-      <a href="https://github.com/pianellalilia-dot" target="_blank"></a>Lilia,
-      is
-      <a
-        href="https://github.com/pianellalilia-dot/meteo"
-        target="_blank"
-        rel="noopener noreferrer"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a
-        href="http:///meteo-current-and-forecast.netlify.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >hosted on Netlify</a
-      >
-    </footer>
+      <main>
+        <div>
+          <h1 class="current-city">Paris</h1>
+          <p class="current-details">
+            Tuesday 10:46, broken clouds<br />Humidity: <strong>73%</strong>,
+            Wind: <strong>10.29 Km/h </strong>
+          </p>
+        </div>
+        <div>
+          <span class="current-temperature-emoji">❄️</span>
+          <span class="current-temperature-number">5</span>
+          <span class="current-temperature-unit">°C </span>
+        </div>
+      </main>
+
+      <footer>
+        Coded by
+        <a href="https://github.com/pianellalilia-dot" target="_blank">Lilia</a
+        >, is
+        <a
+          href="https://github.com/pianellalilia-dot/meteo"
+          target="_blank"
+          rel="noopener noreferrer"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a
+          href="http:///meteo-current-and-forecast.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
