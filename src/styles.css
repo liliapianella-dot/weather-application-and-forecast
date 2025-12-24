@@ -1,12 +1,7 @@
-html,
 body {
-  height: 100%;
-  margin: 0;
-}
-body {
+  min-height: 100vh;
   background: linear-gradient(to top, #def7f2 0%, #338b93 100%);
   background-repeat: no-repeat;
-  background-size: cover;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
