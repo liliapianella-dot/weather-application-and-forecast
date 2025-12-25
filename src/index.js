@@ -1,3 +1,21 @@
+function formatDate(date) {
+  let day = [
+    "Sunday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDay = day[date.getDay()];
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${currentDay} ${hour}:${minutes}`;
+}
+
 function updateWeather(response) {
   let currentCity = document.querySelector("#current-city");
   let currentTemperature = document.querySelector(
@@ -8,6 +26,8 @@ function updateWeather(response) {
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
   let currentWeatherEmoji = document.querySelector("#emoji");
+  let currentDate = document.querySelector("#current-date");
+  let date = new Date(response.data.time * 1000);
 
   currentCity.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
@@ -17,6 +37,7 @@ function updateWeather(response) {
   currentWeatherEmoji.innerHTML = `<img
               src= "${response.data.condition.icon_url}"  alt=""
           />`;
+  currentDate.innerHTML = formatDate(date);
 }
 
 function searchCity(city) {
