@@ -7,12 +7,16 @@ function updateWeather(response) {
   let descriptionWeather = document.querySelector("#descripton-weather");
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
+  let currentWeatherEmoji = document.querySelector("#emoji");
 
   currentCity.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
   descriptionWeather.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = response.data.temperature.humidity;
   currentWind.innerHTML = response.data.wind.speed;
+  currentWeatherEmoji.innerHTML = `<img
+              src= "${response.data.condition.icon_url}"  alt=""
+          />`;
 }
 
 function searchCity(city) {
