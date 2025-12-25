@@ -64,18 +64,19 @@ main .current-details {
   line-height: 24px;
 }
 main .current-temperature-emoji {
-  font-size: 30px;
   position: relative;
-  bottom: 28px;
+  bottom: 10px;
 }
 main .current-temperature-number {
   font-size: 88px;
   font-weight: 700;
+  position: relative;
+  bottom: 28px;
 }
 main .current-temperature-unit {
   font-size: 28px;
   position: relative;
-  bottom: 42px;
+  bottom: 67px;
 }
 footer {
   border-top: 1px solid rgb(249, 247, 254);
