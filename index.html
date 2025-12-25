@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>meteo app</title>
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -31,13 +32,18 @@
         <div>
           <h1 class="current-city" id="current-city">Paris</h1>
           <p class="current-details">
-            Tuesday 10:46, broken clouds<br />Humidity: <strong>73%</strong>,
-            Wind: <strong>10.29 Km/h </strong>
+            Tuesday 10:46, <span id="descripton-weather">broken clouds</span
+            ><br />Humidity: <strong>73%</strong>, Wind:
+            <strong>10.29 Km/h </strong>
           </p>
         </div>
         <div>
-          <span class="current-temperature-emoji">❄️</span>
-          <span class="current-temperature-number">5</span>
+          <span class="current-temperature-emoji" id="emoji">❄️</span>
+          <span
+            class="current-temperature-number"
+            id="current-temperature-number"
+            >5</span
+          >
           <span class="current-temperature-unit">°C </span>
         </div>
       </main>
