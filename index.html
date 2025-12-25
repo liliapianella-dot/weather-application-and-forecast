@@ -29,28 +29,45 @@
       </header>
 
       <main>
-        <div>
-          <h1 class="current-city" id="current-city"></h1>
-          <p class="current-details">
-            <span id="current-date"></span>,
-            <span id="descripton-weather"></span><br />Humidity:
-            <strong><span id="humidity"></span>%</strong> , Wind:
-            <strong><span id="wind"></span> Km/h </strong>
-          </p>
-        </div>
-        <div class="current-temperature">
-          <div id="emoji">
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-              alt=""
-              class="current-temperature-emoji"
-            />
+        <div class="today">
+          <div>
+            <h1 class="current-city" id="current-city"></h1>
+            <p class="current-details">
+              <span id="current-date"></span>,
+              <span id="descripton-weather"></span><br />Humidity:
+              <strong><span id="humidity"></span>%</strong> , Wind:
+              <strong><span id="wind"></span> Km/h </strong>
+            </p>
           </div>
-          <div
-            class="current-temperature-number"
-            id="current-temperature-number"
-          ></div>
-          <div class="current-temperature-unit">°C</div>
+          <div class="current-temperature">
+            <div id="emoji">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                alt=""
+                class="current-temperature-emoji"
+              />
+            </div>
+            <div
+              class="current-temperature-number"
+              id="current-temperature-number"
+            ></div>
+            <div class="current-temperature-unit">°C</div>
+          </div>
+        </div>
+        <div class="forecast">
+          <div>
+            <div class="forecast-day">Tue</div>
+            <div class="forecast-image">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                alt=""
+              />
+            </div>
+            <div class="forecast-temperatures">
+              <div class="forecast-temperature"><strong>2°</strong></div>
+              <div class="forecast-temperature">0°</div>
+            </div>
+          </div>
         </div>
       </main>
 
