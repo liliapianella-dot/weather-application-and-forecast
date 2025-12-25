@@ -1,6 +1,12 @@
+function formatDay(time) {
+  let date = new Date(time * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
 function displayForecast(response) {
   let forecastHtml = "";
-  /* let day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];*/
+
   response.data.daily.forEach(function (day, index) {
     if (index < 5) {
       forecastHtml =
@@ -8,7 +14,7 @@ function displayForecast(response) {
         `
   <div class="forecast">
     <div>
-      <div class="forecast-day">Tue</div>
+      <div class="forecast-day">${formatDay(day.time)}</div>
       <div class="forecast-image">
         <img
           src="${day.condition.icon_url}"
